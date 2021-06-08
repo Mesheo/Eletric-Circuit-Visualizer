@@ -147,7 +147,7 @@ lala\YourTerminal> heroku open # :D
 
 ```bash
 # CLone repository
-git clone traraut && cd traraut
+git clone https://github.com/Mesheo/Circuitos-Trifasicos.git && cd Circuitos-Trifasicos
 
 #Install Dependencies
 pip install {whatever that is underscore on the imports}
