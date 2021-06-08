@@ -17,6 +17,20 @@
 | --- | :---: |
 |![Multipages](https://user-images.githubusercontent.com/71408872/121244773-aa5ecb00-c875-11eb-9ec7-ecda4f080716.gif) | This is how the multipages work. You can switch between tabs and the site will render content depending on which tab you are.|
 |![Calculator](https://user-images.githubusercontent.com/71408872/121244676-8ac7a280-c875-11eb-8926-1211d59610bb.gif) | This part is the "Calculator" tab, where with 4 inputs the site renders a table fullfilled with results kinda complicated to get by hand. God bless Numpy.|
-|![Graphs](https://user-images.githubusercontent.com/71408872/121244828-b9de1400-c875-11eb-850e-21261154c4fc.gif) | Here you can see the Graph changing his output depending of the results of the table I said before. Because physics the trace V1 always shape in a similar way, but there is not on me. .|
+|![Graphs](https://user-images.githubusercontent.com/71408872/121244828-b9de1400-c875-11eb-850e-21261154c4fc.gif) | Here you can see the Graph changing his output depending of the results of the table I said before. Because physics the trace V1 always shape in a similar way, but that is not on me. .|
 
 # 💡 Tips
+<p> This was my first try using Dash and even tho the documentation is pretty good, I found some troubles and I want to make sure that you (or me in the future) dont stumble there again
+</p>
+
+### Callbacks on Dash
+<p>The callbacks will always have this structure:</p>
+```py
+@app.callback(
+              Output('id_of_the_output_Element', 'property_that_will_change'),
+              Input('id_of_the_input_Element', 'property_that_wil_be_stored')
+
+def function_Dat_Update_Output(input_value): #the argument can be any name but the value assinged comes from the property_that_wil_be_stored 
+		if "blabla" == "blabla":
+				return input_value + 3 #now the property_that_will_change have this value
+```
