@@ -15,8 +15,8 @@
 ## App samples
 | App | Description |
 | --- | :---: |
-|![Multipages](https://user-images.githubusercontent.com/71408872/121244773-aa5ecb00-c875-11eb-9ec7-ecda4f080716.gif) | This is how the multipages work. You can switch between tabs and the site will render content depending on which tab you are on.|
-|![Calculator](https://user-images.githubusercontent.com/71408872/121244676-8ac7a280-c875-11eb-8926-1211d59610bb.gif) | This part is the "Calculator" tab, where with 4 inputs the site renders a table fullfilled with results somewhat complicated to get by hand. God bless Numpy.|
+|![Multipages](https://user-images.githubusercontent.com/71408872/121244773-aa5ecb00-c875-11eb-9ec7-ecda4f080716.gif) | This is how the multipages work. You can switch between tabs and the site will render content depending on which tab you are in.|
+|![Calculator](https://user-images.githubusercontent.com/71408872/121244676-8ac7a280-c875-11eb-8926-1211d59610bb.gif) | This part is the "Calculator" tab, where with 4 inputs the site renders a table filled with results somewhat complicated to get by hand. God bless Numpy.|
 |![Graphs](https://user-images.githubusercontent.com/71408872/121244828-b9de1400-c875-11eb-850e-21261154c4fc.gif) | Here you can see the Graph changing it's output depending of the results of the table I said before. Because of some physical aspects the trace V1 always shape in a similar way, but that is not on me. .|
 
 # 💡 Tips
