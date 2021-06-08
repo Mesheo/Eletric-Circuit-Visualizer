@@ -50,10 +50,10 @@ There lots of ways to work with this, like multiple outputs with just one input,
 app.layout = html.Div(
 children=[
 		dcc.Tabs(id="tabs-styled-with-inline", className='custom-tabs-container', children=[
-            dcc.Tab(label="Apresentação", value="tab-apresentacao", style=tab_style, selected_style=tab_selected_style),
-            dcc.Tab(label="Introdução Teórica", value="tab-introducao_teorica", style=tab_style, selected_style=tab_selected_style),
-            dcc.Tab(label='Cálculos', value='tab-calculos', style=tab_style, selected_style=tab_selected_style),
-            dcc.Tab(label='Gráficos', value='tab-graficos',style=tab_style, selected_style=tab_selected_style),
+        dcc.Tab(label="Apresentação", value="tab-apresentacao", style=tab_style, selected_style=tab_selected_style),
+        dcc.Tab(label="Introdução Teórica", value="tab-introducao_teorica", style=tab_style, selected_style=tab_selected_style),
+        dcc.Tab(label='Cálculos', value='tab-calculos', style=tab_style, selected_style=tab_selected_style),
+        dcc.Tab(label='Gráficos', value='tab-graficos',style=tab_style, selected_style=tab_selected_style),
         ], style=tabs_styles),
     html.Div(id='tabs-content-inline'),
     dcc.Store(id='intermediate-value', storage_type='session'),
@@ -73,6 +73,7 @@ def render_content(tab):
 <p>Because the Function that produce the graph data was so large, I have to put it inside a separeted page. And with that Dash is amazingly pratical. You just have to make sure that the .py file containing your fuction and the deploy.py are both in the same directory.
 </p>
 ![Untitled](https://user-images.githubusercontent.com/71408872/121246379-7b495900-c877-11eb-95a1-4460adc0b10d.jpg)
+
 With everybody on the same place we just need to import
 
 ```py
