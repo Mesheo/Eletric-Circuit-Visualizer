@@ -23,7 +23,7 @@
 <p> This was my first try using Dash and even tho the documentation is pretty good, I found some troubles and I want to make sure that you (or me in the future) dont stumble there again
 </p>
 
-### Callbacks on Dash
+## Callbacks on Dash
 <p>The callbacks will always have this structure:</p>
 
 ```py
@@ -39,3 +39,108 @@ There is no flexibility to this, you need to get the Output first, Input second 
 <p>
 There lots of ways to work with this, like multiple outputs with just one input, chained callbacks or even states (that i used on the table part) but that is very well explained here: <a href="https://dash.plotly.com/basic-callbacks">Basic Dash Callbacks</a>
 </p>
+
+<p>For pratical purposes here is a sample of the code from the tabs, where i used callbacks: <p>
+
+```py
+
+app.layout = html.Div(
+children=[
+		dcc.Tabs(id="tabs-styled-with-inline", className='custom-tabs-container', children=[
+            dcc.Tab(label="Apresentação", value="tab-apresentacao", style=tab_style, selected_style=tab_selected_style),
+            dcc.Tab(label="Introdução Teórica", value="tab-introducao_teorica", style=tab_style, selected_style=tab_selected_style),
+            dcc.Tab(label='Cálculos', value='tab-calculos', style=tab_style, selected_style=tab_selected_style),
+            dcc.Tab(label='Gráficos', value='tab-graficos',style=tab_style, selected_style=tab_selected_style),
+        ], style=tabs_styles),
+    html.Div(id='tabs-content-inline'),
+    dcc.Store(id='intermediate-value', storage_type='session'),
+])
+
+@app.callback(Output('tabs-content-inline', 'children'),
+              Input('tabs-styled-with-inline', 'value'))  
+
+def render_content(tab):
+    if tab == "tab-calculos":  return calculos.layout, #Depending of the tab Im in return different things, NOICE
+    elif tab == "tab-apresentacao": return apresentacao.layout,
+    elif tab == 'tab-introducao_teorica': return introducao_teorica.layout
+    elif tab == 'tab-graficos': return graficos.layouts
+```
+
+## Plotting graphs with Plotly express
+<p>Because the Function that produce the graph data was so large, I have to put it inside a separeted page. And with that Dash is amazingly pratical. You just have to make sure that the .py file containing your fuction and the deploy.py are both in the same directory.
+</p>
+![Untitled](https://user-images.githubusercontent.com/71408872/121246379-7b495900-c877-11eb-95a1-4460adc0b10d.jpg)
+With everybody on the same place we just need to import
+
+```py
+from updateGraph import grafico_calculos #the name of the function inside updateGraph
+```
+
+<p>Now to make the graph visually apear you need to create a dcc.graph somewhere and change the "figure" property with the use of callbacks. The syntax part to plot graphs is much better explained on <a href="https://plotly.com/python/plotly-express/">Plotly Express</a>. 
+But for pratical purposes I will show how to make a simple line going up
+
+```py
+@app.callback(Output('graph', 'figure'),
+            Input('inputsGraph', 'data'))
+
+def update_graph(inputsGraph):
+
+	  x_content = [1, 2, 3, 4]
+		y_content = [1, 2, 3, 4] #If x go higher y go higher, BOOM there is a line going up
+		
+    fig = go.Figure(go.Scatter()) 
+		# Fig is the thing we gonna return to fullfill the figure property of ours dcc.graph Element
+
+    fig.add_trace(go.Scatter(x=x, y=v, mode='lines', name='Line going Up baby'))
+   
+    fig.update_layout(
+        xaxis_title="This is the X Axis",
+        yaxis_title="This is the Y Axis"
+    )
+
+    return fig 
+```
+
+## Deploying dash apps with heroku
+<p>This is part is very straight forward because there is not much different ways to do (I think), but you need to get every step right or the deploy display much more errors that you can handle.
+</p>
+So the step by step guide is:
+
+* Intiate a git repo: git init
+* Write a .gitignore file on your current directory with  
+
+```py
+venv
+*.pyc
+.env
+.DS_Store
+```
+Maybe you need to ignore more things but that worked fine for me. And remember the .gitignore files DOES NOT have a file extension, i mess up with this some times.
+
+* Create the Procfile. archive with the content below, and notice it doesn't have an extension too
+
+```py
+web: gunicorn deploy:server
+```
+Deploy is the name of the file your program is inside. You can change this name but not the typing structure.One space more or less and the heroku will not understand. At leas for me was like that.
+
+* Write on the terminal
+```py
+pip freeze > requirements.txt 
+# this create a requirements.txt file with all the
+# librarys heroku server will need to install
+```
+* Now you just have to setup your git to connect with heroku. Follow the lines below
+
+```py 
+lala\YourTerminal> heroku login #press any key except q and do the login
+lala\YourTerminal> git add .
+lala\YourTerminal> git commit -m "Commited yay"
+lala\YourTerminal> heroku create -n mywebapp
+lala\YourTerminal> heroku git:remote -a mywebapp
+lala\YourTerminal> git push heroku master #This part can take several minutes
+lala\YourTerminal> heroku ps:scale web=1 #your app is already deployd but this make sure will be only one runnig around
+lala\YourTerminal> heroku open # :D
+```
+
+# Getting Started
