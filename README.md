@@ -20,7 +20,7 @@
 |![Graphs](https://user-images.githubusercontent.com/71408872/121244828-b9de1400-c875-11eb-850e-21261154c4fc.gif) | Here you can see the Graph changing it's output depending of the results of the table I said before. Because of some physical aspects the trace V1 always shape in a similar way, but that is not on me. .|
 
 # 💡 Tips
-<p> This was my first try using Dash and even tho the documentation is pretty good, I found some troubles and I want to make sure that you (or me in the future) dont stumble there again
+<p> This was my first try using Dash and even though the documentation is pretty good, I had some troubles and I want to make sure that you (or me in the future) don't stumble there again
 </p>
 
 ## Callbacks on Dash
@@ -37,10 +37,10 @@ def function_Dat_Update_Output(input_value): #args can have name but always repr
 ```
 There is no flexibility to this, you need to get the Output first, Input second and the function that update stuff immediately after. Remember you `don't` call the function, you just define them.<p>
 <p>
-There lots of ways to work with this, like multiple outputs with just one input, chained callbacks or even states (that i used on the table part) but that is very well explained here: <a href="https://dash.plotly.com/basic-callbacks">Basic Dash Callbacks</a>
+There lots of ways to work with this, like multiple outputs with just one input, chained callbacks or even states (that I used on the table part), but that is very well explained here: <a href="https://dash.plotly.com/basic-callbacks">Basic Dash Callbacks</a>
 </p>
 
-<p>For pratical purposes here is a sample of the code from the tabs, where i used callbacks: <p>
+<p>For pratical purposes here is a sample of the code from the tabs, where I used callbacks: <p>
 
 ```py
 
