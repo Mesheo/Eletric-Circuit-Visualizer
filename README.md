@@ -70,9 +70,9 @@ def render_content(tab):
 ```
 
 ## Plotting graphs with Plotly express
-<p>Because the Function that produce the graph data was so large, I have to put it inside a separeted page. And with that Dash is amazingly pratical. You just have to make sure that the .py file containing your fuction and the deploy.py are both in the same directory.
-</p>
-<p> ![Untitled](https://user-images.githubusercontent.com/71408872/121246379-7b495900-c877-11eb-95a1-4460adc0b10d.jpg)</p>
+Because the Function that produce the graph data was so large, I have to put it inside a separeted page. And with that Dash is amazingly pratical. You just have to make sure that the .py file containing your fuction and the deploy.py are both in the same directory.
+
+![Untitled](https://user-images.githubusercontent.com/71408872/121246379-7b495900-c877-11eb-95a1-4460adc0b10d.jpg)
 
 With everybody on the same place we just need to import
 
@@ -143,7 +143,7 @@ pip freeze > requirements.txt
 > heroku create -n mywebapp
 > heroku git:remote -a mywebapp
 > git push heroku master #This part can take several minutes
-> heroku ps:scale web=1 #your app is already deployd but this make sure will be only one runnig around
+> heroku ps:scale web=1 #your app is already deployed but this make sure will be only one runnig around
 > heroku open # :D
 ```
 
