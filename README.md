@@ -31,7 +31,10 @@
               Output('id_of_the_output_Element', 'property_that_will_change'),
               Input('id_of_the_input_Element', 'property_that_wil_be_stored')
 
-def function_Dat_Update_Output(input_value): #the argument can be any name but the value assinged comes from the property_that_wil_be_stored 
+def function_Dat_Update_Output(input_value): #args can have name but always represent the property_that_wil_be_stored 
 		if "blabla" == "blabla":
 				return input_value + 3 #now the property_that_will_change have this value
 ```
+<p>There is no flexibility to this, you need to get the Output first - Input second and the function that update stuff immediately after. Remember you don't call the function, you just define them. 
+There lots of ways to work with this, like multiple outputs with just one input, chained callbacks or even states (that i used on the table part) but that is very well explained here: <a href="https://dash.plotly.com/basic-callbacks">Basic Dash Callbacks</a>
+</p>
