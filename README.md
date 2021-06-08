@@ -25,6 +25,7 @@
 
 ### Callbacks on Dash
 <p>The callbacks will always have this structure:</p>
+
 ```py
 @app.callback(
               Output('id_of_the_output_Element', 'property_that_will_change'),
