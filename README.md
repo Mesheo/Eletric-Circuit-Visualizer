@@ -115,7 +115,7 @@ venv
 .env
 .DS_Store
 ```
-Maybe you need to ignore more things but that worked fine for me. And remember the .gitignore files DOES NOT have a file extension, i mess up with this some times.
+Maybe you need to ignore more things but that worked fine for me. And remember the .gitignore files `DOES NOT` have a file extension, I messed up with this some times.
 
 * Create the Procfile. archive with the content below, and notice it doesn't have an extension too
 
@@ -144,3 +144,15 @@ lala\YourTerminal> heroku open # :D
 ```
 
 # Getting Started
+
+```bash
+# CLone repository
+git clone traraut && cd traraut
+
+#Install Dependencies
+pip install {whatever that is underscore on the imports}
+
+#Run Aplication
+python deploy.py
+```
+Go to http://127.0.0.1:8050/ to see the application running
