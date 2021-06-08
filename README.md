@@ -1,5 +1,8 @@
 ### *Dash is an amazing framework for building ML and DataScience web apps*.
 
+![Screenshot_1](https://user-images.githubusercontent.com/71408872/121252074-f6ae0900-c87d-11eb-8725-a32fc5c10f3f.png)
+
+
 <p>This project was created by me to help some friends that needed to present their study in an interactive way, with the possibility of someone try random inputs and see visually what that means after the formulas they explain on the site.
 </p>
 
@@ -17,7 +20,7 @@
 | --- | :---: |
 |![Multipages](https://user-images.githubusercontent.com/71408872/121244773-aa5ecb00-c875-11eb-9ec7-ecda4f080716.gif) | This is how the multipages work. You can switch between tabs and the site will render content depending on which tab you are in.|
 |![Calculator](https://user-images.githubusercontent.com/71408872/121244676-8ac7a280-c875-11eb-8926-1211d59610bb.gif) | This part is the "Calculator" tab, where with 4 inputs the site renders a table filled with results somewhat complicated to get by hand. God bless Numpy.|
-|![Graphs](https://user-images.githubusercontent.com/71408872/121244828-b9de1400-c875-11eb-850e-21261154c4fc.gif) | Here you can see the Graph changing it's output depending of the results of the table I said before. Because of some physical aspects the trace V1 always shape in a similar way, but that is not on me. .|
+|![Graphs](https://user-images.githubusercontent.com/71408872/121244828-b9de1400-c875-11eb-850e-21261154c4fc.gif) | Here you can see the Graph changing it's output depending of the results of the table I said before. Because of some physical aspects the trace V1 is always shaped in a similar way, but that is not on me. .|
 
 # 💡 Tips
 <p> This was my first try using Dash and even though the documentation is pretty good, I had some troubles and I want to make sure that you (or me in the future) don't stumble there again
