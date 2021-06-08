@@ -135,15 +135,15 @@ pip freeze > requirements.txt
 ```
 * Now you just have to setup your git to connect with heroku. Follow the lines below
 
-```py 
-lala\YourTerminal> heroku login #press any key except q and do the login
-lala\YourTerminal> git add .
-lala\YourTerminal> git commit -m "Commited yay"
-lala\YourTerminal> heroku create -n mywebapp
-lala\YourTerminal> heroku git:remote -a mywebapp
-lala\YourTerminal> git push heroku master #This part can take several minutes
-lala\YourTerminal> heroku ps:scale web=1 #your app is already deployd but this make sure will be only one runnig around
-lala\YourTerminal> heroku open # :D
+```bash 
+> heroku login #press any key except q and do the login
+> git add .
+> git commit -m "Commited yay"
+> heroku create -n mywebapp
+> heroku git:remote -a mywebapp
+> git push heroku master #This part can take several minutes
+> heroku ps:scale web=1 #your app is already deployd but this make sure will be only one runnig around
+> heroku open # :D
 ```
 
 # Getting Started
