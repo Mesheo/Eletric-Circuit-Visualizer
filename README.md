@@ -89,11 +89,12 @@ But for pratical purposes I will show how to make a simple line going up
 
 def update_graph(inputsGraph):
 
-	  x_content = [1, 2, 3, 4]
-		y_content = [1, 2, 3, 4] #If x go higher y go higher, BOOM there is a line going up
-		
+    #If x go higher y go higher, BOOM there is a line going up
+    x_content = [1, 2, 3, 4]
+    y_content = [1, 2, 3, 4] 
+    
+    # Fig is the thing we gonna return to fullfill the figure property of ours dcc.graph Element
     fig = go.Figure(go.Scatter()) 
-		# Fig is the thing we gonna return to fullfill the figure property of ours dcc.graph Element
 
     fig.add_trace(go.Scatter(x=x, y=v, mode='lines', name='Line going Up baby'))
    
