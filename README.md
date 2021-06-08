@@ -35,7 +35,7 @@ def function_Dat_Update_Output(input_value): #args can have name but always repr
 		if "blabla" == "blabla":
 				return input_value + 3 #now the property_that_will_change have this value
 ```
-<p>There is no flexibility to this, you need to get the Output first, Input second and the function that update stuff immediately after. Remember you `don't` call the function, you just define them.<p>
+There is no flexibility to this, you need to get the Output first, Input second and the function that update stuff immediately after. Remember you `don't` call the function, you just define them.<p>
 <p>
 There lots of ways to work with this, like multiple outputs with just one input, chained callbacks or even states (that i used on the table part) but that is very well explained here: <a href="https://dash.plotly.com/basic-callbacks">Basic Dash Callbacks</a>
 </p>
